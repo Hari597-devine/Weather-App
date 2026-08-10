@@ -49,7 +49,7 @@ html[data-theme="dark"] {
   background-attachment: fixed;
   transition: background 1.2s ease, color var(--transition-speed) ease;
   overflow-x: hidden;
-  padding: 110px 24px 40px; /* Safe space under navbar */
+  padding: 110px 24px 40px;
 }
 
 /* ==========================================================================
@@ -132,7 +132,6 @@ html[data-theme="dark"] .nav-links {
   flex-shrink: 0;
 }
 
-/* Segmented Unit Control */
 .unit-segmented-control {
   position: relative;
   display: flex;
@@ -182,7 +181,6 @@ html[data-theme="dark"] .unit-segmented-control {
   color: var(--accent-color);
 }
 
-/* Theme Switch Toggle Slider */
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
@@ -361,7 +359,6 @@ input:checked + .slider:before {
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-/* Grid Allocations */
 .main-card {
   grid-column: span 4;
   text-align: center;
@@ -506,7 +503,6 @@ input:checked + .slider:before {
   margin-bottom: 20px;
 }
 
-/* Details container setup as 2-column grid for Air Quality, UV, Humidity, Wind */
 .main-card .details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -521,7 +517,6 @@ html[data-theme="dark"] .main-card .details {
   background: rgba(255, 255, 255, 0.02);
 }
 
-/* Individual metric item card */
 .main-card .detail-item {
   display: flex;
   flex-direction: column;
@@ -806,7 +801,6 @@ html[data-theme="dark"] .day-card {
   color: var(--text-secondary);
 }
 
-/* --- Rain --- */
 .vibe-rain { background: linear-gradient(180deg, #4b6584 0%, #2c3e50 100%); }
 .vibe-thunder { background: linear-gradient(180deg, #2c2c54 0%, #1a1a2e 100%); }
 
@@ -863,7 +857,6 @@ html[data-theme="dark"] .day-card {
   animation: vibeSnowFall 3s linear infinite;
 }
 
-/* --- Lightning bolt --- */
 .vibe-lightning-bolt {
   position: absolute;
   top: 44px;
@@ -878,7 +871,6 @@ html[data-theme="dark"] .day-card {
   opacity: 0;
 }
 
-/* --- Clear Day Sun --- */
 .vibe-clear-day { background: linear-gradient(180deg, #56ccf2 0%, #87ceeb 60%, #fef9c3 100%); }
 
 .vibe-sun {
@@ -906,7 +898,6 @@ html[data-theme="dark"] .day-card {
   animation: vibeSunRotate 20s linear infinite;
 }
 
-/* --- Clear Night Stars --- */
 .vibe-clear-night { background: linear-gradient(180deg, #0c1524 0%, #1a1e36 60%, #121b2d 100%); }
 
 .vibe-moon {
@@ -937,10 +928,8 @@ html[data-theme="dark"] .day-card {
   animation: vibeStarTwinkle 2s ease-in-out infinite alternate;
 }
 
-/* --- Clouds --- */
 .vibe-clouds { background: linear-gradient(180deg, #94a3b8 0%, #cbd5e1 100%); }
 
-/* --- Mist --- */
 .vibe-mist { background: linear-gradient(180deg, #d1d5db 0%, #e5e7eb 100%); }
 
 .vibe-mist-layer {
@@ -955,10 +944,8 @@ html[data-theme="dark"] .day-card {
 .vibe-mist-2 { top: 60px; left: -40%; animation: vibeMistDrift 22s ease-in-out infinite alternate-reverse; opacity: 0.6; }
 .vibe-mist-3 { top: 90px; left: -10%; animation: vibeMistDrift 14s ease-in-out infinite alternate; opacity: 0.4; }
 
-/* --- Snow background --- */
 .vibe-snow { background: linear-gradient(180deg, #e2e8f0 0%, #f0f4f8 100%); }
 
-/* === KEYFRAMES === */
 @keyframes vibeCloudDrift {
   from { transform: translateX(0); }
   to { transform: translateX(20px); }
@@ -1287,7 +1274,6 @@ html[data-theme="dark"] .day-card {
   transition: opacity 0.05s ease;
 }
 
-/* Animations */
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
 }
@@ -1300,7 +1286,6 @@ html[data-theme="dark"] .day-card {
 /* ==========================================================================
    CLIMATIC BACKGROUND GRADIENTS & ACCENTS
    ========================================================================== */
-/* Clear (Sunny / Clean Night) */
 .container.climate-clear {
   --bg-gradient: linear-gradient(135deg, #e0f2fe, #fef08a, #fed7aa);
 }
@@ -1315,7 +1300,6 @@ html[data-theme="dark"] .climate-clear .glass {
   border-color: rgba(253, 224, 71, 0.05);
 }
 
-/* Clouds (Cloudy) */
 .container.climate-clouds {
   --bg-gradient: linear-gradient(135deg, #e2e8f0, #cbd5e1, #94a3b8);
 }
@@ -1330,7 +1314,6 @@ html[data-theme="dark"] .climate-clouds .glass {
   border-color: rgba(148, 163, 184, 0.05);
 }
 
-/* Rain (Rainy) */
 .container.climate-rain {
   --bg-gradient: linear-gradient(135deg, #cbdffb, #a5c5f5, #7ea8ed);
 }
@@ -1345,7 +1328,6 @@ html[data-theme="dark"] .climate-rain .glass {
   border-color: rgba(96, 165, 250, 0.06);
 }
 
-/* Thunderstorm */
 .container.climate-thunder {
   --bg-gradient: linear-gradient(135deg, #d3dbe7, #b29bec, #844be8);
 }
@@ -1360,7 +1342,6 @@ html[data-theme="dark"] .climate-thunder .glass {
   border-color: rgba(168, 85, 247, 0.06);
 }
 
-/* Snow */
 .container.climate-snow {
   --bg-gradient: linear-gradient(135deg, #f3f7fa, #e8edf3, #ffffff);
 }
@@ -1375,7 +1356,6 @@ html[data-theme="dark"] .climate-snow .glass {
   border-color: rgba(226, 232, 240, 0.06);
 }
 
-/* Mist / Fog */
 .container.climate-mist {
   --bg-gradient: linear-gradient(135deg, #f0f4f8, #d9e2ec, #bcccdc);
 }
@@ -1420,6 +1400,9 @@ html[data-theme="dark"] .climate-mist .glass {
   .top-bar {
     justify-content: center;
     flex-direction: column;
+  }
+  .container {
+    padding-top: 190px;
   }
   .controls-group {
     justify-content: center;
