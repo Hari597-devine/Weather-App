@@ -257,6 +257,15 @@ input:checked + .slider:before {
 /* ==========================================================================
    DASHBOARD & CONTROLS
    ========================================================================== */
+.controls-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 10px 16px;
+  box-shadow: var(--glass-shadow);
+}
+
 .controls-group {
   display: flex;
   gap: 16px;
@@ -1415,10 +1424,27 @@ html[data-theme="dark"] .climate-mist .glass {
   .controls-group {
     justify-content: center;
     width: 100%;
+    flex-direction: column;
+  }
+  .select-container {
+    width: 100%;
+  }
+  .select-container select {
+    width: 100%;
+  }
+  .search-box {
+    width: 100%;
+    flex-wrap: wrap;
   }
   .select-container select, .search-box input {
     min-width: 0;
-    flex: 1;
+    flex: 1 1 100%;
+  }
+  .search-box button {
+    flex: 1 1 auto;
+    padding: 10px 12px;
+    font-size: 13px;
+    white-space: nowrap;
   }
   .air-box,
   .uv,

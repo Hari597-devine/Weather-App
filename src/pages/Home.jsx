@@ -223,7 +223,7 @@ export default function Home({ unit }) {
                 title="Use my current location"
                 className="location-btn"
               >
-                {locating ? "Locating..." : "📍 My Location"}
+                {locating ? "Locating..." : "My Location"}
               </button>
             </div>
           </div>
